@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "fontastique";
+    src: url('fonts/fontastique.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "josefin-regular";
+    src: url('fonts/JosefinSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "josefin-italic";
+    src: url('fonts/JosefinSans-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "josefin-light-italic";
+    src: url('fonts/JosefinSans-LightItalic.ttf') format('truetype');
+}
+
+:root {
+    --beige: #FFF7EC;
+    --yellow: #E69712;
+    --red: #AF411D;
+    --light-red: #FFD4C6;
+
+    --fontastique: "fontastique";
+    --josefin-regular: "josefin-regular";
+    --josefin-italic: "josefin-italic";
+    --josefin-light-italic: "josefin-light-italic";
+}
