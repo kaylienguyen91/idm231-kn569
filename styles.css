@@ -29,3 +29,114 @@
     --josefin-italic: "josefin-italic";
     --josefin-light-italic: "josefin-light-italic";
 }
+
+html {
+    background-color: var(--beige);
+}
+
+#instruct-button {
+    width: 3rem;
+    filter: invert(67%) sepia(38%) saturate(1904%) hue-rotate(354deg) brightness(94%) contrast(92%) drop-shadow(5px 5px 4px #E6D6BC);
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+}
+
+h1, #subtitle, h2, #dish-intro {
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: var(--fontastique);
+    color: var(--red);
+}
+
+#bday-input, #go-button, #description {
+    font-family: var(--josefin-regular);
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 5px 5px var(--light-red);
+    margin: 3.2rem 0 0 0;
+}
+
+#subtitle {
+    font-family: var(--josefin-italic);
+    margin: 2rem 0 1rem 0;
+}
+
+#bday-generator {
+    display: flex;
+    gap: 1.25rem;
+    margin: auto;
+    width: fit-content;
+}
+
+#bday-input {
+    background-color: white;
+    color: #A4A4A4;
+    border: 3px solid var(--yellow);
+}
+
+#go-button {
+    background-color: var(--yellow);
+    color: white;
+}
+
+#bday-input, #go-button {
+    border-radius: 30px;
+    padding: 0 1.5rem;
+}
+
+#bday-input p, #go-button p {
+    margin: .5rem 0;
+}
+
+#main-content {
+    display: flex;
+    margin: 3rem 2rem;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu div {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu img {
+    opacity: 0.5;
+    width: 7.5rem;
+}
+
+#detail-box {
+    background-color: var(--light-red);
+    border-radius: 30px;
+    width: 32rem;
+    padding: 2rem;
+    margin: 180px 70px 0 70px;
+}
+
+#dish-img {
+    width: 17.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+#dish-intro {
+    font-family: var(--josefin-light-italic);
+    margin: 0 3rem;
+}
+
+#dish-intro, #description {
+    line-height: 130%;
+}
+
+#description {
+    font-size: 1.2rem;
+}
