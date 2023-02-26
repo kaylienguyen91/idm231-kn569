@@ -100,28 +100,46 @@ h1 {
 
 .menu {
     display: flex;
+    column-gap: 16px;
 }
 
 .menu div {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+}
+
+#column-1, #column-4 {
+    justify-content: flex-end;
+    height: 400px;
 }
 
 .menu img {
     opacity: 0.5;
-    width: 7.5rem;
+    width: 120px;
+}
+
+#che-img {
+    width: 70px;
+}
+
+#egg-coffee-img, #iced-coffee-img {
+    width: 80px;
 }
 
 #detail-box {
     background-color: var(--light-red);
     border-radius: 30px;
     width: 32rem;
-    padding: 2rem;
+    padding: 4rem 2rem 1rem 2rem;
     margin: 180px 70px 0 70px;
 }
 
 #dish-img {
     width: 17.5rem;
+    display: block;
+    margin: auto;
 }
 
 h2 {
