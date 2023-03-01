@@ -12,10 +12,10 @@ function enterBday() {
     if (bday.length <= 0) return;
     month = parseInt(bday.substring(2, 3));
     day = parseInt(bday.substring(0, 1));
-    findBday()
+    findBday(month, day)
 };
 
-function findBday() {
+function findBday(month, day) {
     if ((month == 3 && day >= 21) || (month == 4 && day <= 20)) {
         dish = "che";
     } else if ((month == 4 && day >= 21) || (month == 5 && day <= 20)) {
@@ -41,8 +41,24 @@ function findBday() {
     } else if ((month == 2 && day >= 20) || (month == 3 && day <= 20)) {
         dish = "phin-coffee";
     }
-    showDishDetail();
+    showDishDetail(dish);
 };
+
+function showDishDetail(dish) {
+    // loop through dishData and find the match
+}
+
+const dishData = [
+    {
+        name: 'Pho',
+        intro: 'A soup dish consisting of broth, rice noodles, herbs, and sliced meat (usually beef)',
+        description: 'You are friendly and outgoing, known as "the diplomat" in your friend group. You are good at debating and public speaking. You are a wonderful story teller - it's hard to get distracted when listening to you!',
+        image: 'pho.png',
+    },
+    {
+        name: 
+    }
+]
 
 function findClickedDish() {
     if (clickedDish = "che") {
