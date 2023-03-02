@@ -1,8 +1,8 @@
 let dish = "";
-let clickedDish = "";
-let dishImage = "";
-let dishIntro = "";
-let dishDetails = "";
+// let clickedDish = "";
+// let dishImage = "";
+// let dishIntro = "";
+// let dishDetails = "";
 
 let month = "";
 let day = "";
