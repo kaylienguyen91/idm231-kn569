@@ -7,22 +7,31 @@ let dish = "";
 let month = "";
 let day = "";
 
-function enterBday() {
-    const bday = getElementById('bday-input').value;
+
+function enterBday(event) {
+    // console.log("hello")
+    event.preventDefault();
+    const bday = document.getElementById('bday-input');
+
+    console.log(bday.value)
     if (bday.length <= 0) return;
-    month = parseInt(bday.substring(2, 3));
-    day = parseInt(bday.substring(0, 1));
+    month = parseInt(bday.value.substring(5, 7));
+    day = parseInt(bday.value.substring(8, 10));
     findBday(month, day)
 };
 
-const form = document.getElementById('bday-generator');
-
+const form = document.querySelector('#bday-generator');
 if (form) {
-    form.addEventListener('submit', findBday, false);
+    // console.log('testing')
+    form.addEventListener('submit', enterBday, false);
+    // form.addEventListener('submit', () => { console.log('form submitted')})
+} else {
+    console.log('no form found')
 }
 
-function findBday(month, day, event) {
-    event.preventDefault();
+function findBday(month, day) {
+    // console.log(month, day)
+    // console.log("Hello")
     if ((month == 3 && day >= 21) || (month == 4 && day <= 20)) {
         dish = "Che";
     } else if ((month == 4 && day >= 21) || (month == 5 && day <= 20)) {
@@ -48,18 +57,29 @@ function findBday(month, day, event) {
     } else if ((month == 2 && day >= 20) || (month == 3 && day <= 20)) {
         dish = "Phin coffee";
     }
-    const dishDetail = showDishDetail(dish);
-    console.log(dishDetail);
+    // console.log("Hello")
+    // const dishDetail = showDishDetail(dish)
+    showDishDetail(dish)
 };
 
 function showDishDetail(dish) {
-    // loop through dishData and find the match
-    for (let i = 0; i < dishData.length; i++) {
-        if (i.name === dish) {
-            return i.values(dishData);
-        }
-    };
+    const main_dish = dishData.filter(
+        item => item.name === dish
+    )[0]
+    console.log(main_dish)
 }
+
+    // function update_ui(selected_color) {
+    //     console.log('selected color: ', selected_color)
+    //     const color_object = color_data.filter(
+    //         item => item.name === selected_color
+    //     )[0]
+    //     console.log(color_object)
+    
+    //     document.body.style.backgroundColor = color_object.hex
+
+    // dishData.forEach
+
 
 const dishData = [
     {
@@ -169,3 +189,67 @@ const dishData = [
 //     }
 //     showDishDetail();
 // };
+
+
+
+
+// Lecture
+// const color_data = [
+//     {
+//         name: 'red',
+//         hex: '#ff0000',
+//         sound: 'sound_1',
+//     },
+//     {
+//         name: 'white',
+//         hex: '#ffffff',
+//         sound: 'sound_2',
+//     },
+//     {
+//         name: 'blue',
+//         hex: '#0000ff',
+//         sound: 'sound_3',
+//     },
+// ]
+
+// const audio_element = document.querySelector('#audio_player')
+// const button_div = document.querySelector('.buttons')
+// const select_element = document.getElementById('color')
+
+// function update_ui(selected_color) {
+//     console.log('selected color: ', selected_color)
+//     const color_object = color_data.filter(
+//         item => item.name === selected_color
+//     )[0]
+//     console.log(color_object)
+
+//     document.body.style.backgroundColor = color_object.hex
+
+//     audio_element.pause()
+//     audio_element.currentTime = 0
+//     audio_element.src = '/sounds/$'
+// }
+
+// function create_button(item) {
+//     console.log(item)
+//     const button = document.createElement('button')
+//     const button_label = document.createTextNode(item.name)
+//     button.className = item.name
+//     button.addEventListener('click', () => {
+//         // console.log(button.className)
+//         update_ui(button.className)
+//     })
+//     button.appendChild(button_label)
+// }
+
+// function create_ui_element() {
+//     color_data.forEach(item => {
+//         create_button(item)
+//     })
+// }
+
+// function init() {
+//     create_ui_element();
+// }
+
+// window.addEventListener('load', init, false);
