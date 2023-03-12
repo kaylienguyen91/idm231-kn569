@@ -60,6 +60,7 @@ function findBday(month, day) {
     // console.log("Hello")
     // const dishDetail = showDishDetail(dish)
     showDishDetail(dish)
+    showClickedDish(dish)
 };
 
 function showDishDetail(dish) {
@@ -73,17 +74,22 @@ function showDishDetail(dish) {
     document.getElementById("description").innerText = main_dish.description;
 }
 
-    // function update_ui(selected_color) {
-    //     console.log('selected color: ', selected_color)
-    //     const color_object = color_data.filter(
-    //         item => item.name === selected_color
-    //     )[0]
-    //     console.log(color_object)
-    
-    //     document.body.style.backgroundColor = color_object.hex
+const dishButton = document.getElementsByClassName('dish-button').getAttribute('alt');
 
-    // dishData.forEach
+function showClickedDish(dishButton) {
+    const main_dish = dishData.filter(
+        item => item.name === dishButton
+    )[0]
+    console.log(main_dish)
+    document.getElementById("dish-img").src = main_dish.image;
+    document.getElementById("dish-name").innerText = main_dish.name;
+    document.getElementById("dish-intro").innerText = main_dish.intro;
+    document.getElementById("description").innerText = main_dish.description;
+}
 
+if (dishButton) {
+    dishButton.addEventListener('click', showDishDetail, false);
+}
 
 const dishData = [
     {
@@ -159,11 +165,7 @@ const dishData = [
         image: 'image-asset/che.png',
 }];
 
-// const dishButton = document.getElementsByClassName('dish-button');
-// console.log(dishButton);
-// if (dishButton) {
-//     dishButton.addEventListener('click', showDishDetail, false);
-// }
+
 
 // function findClickedDish() {
 //     if (clickedDish = "che") {
