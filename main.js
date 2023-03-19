@@ -95,6 +95,18 @@ function showClickedDish(button) {
     playsound(mainDish.sound);
 }
 
+const helpButton = document.getElementById('help-button');
+
+if (helpButton) {
+    helpButton.addEventListener('click', () => {
+        document.getElementById("dish-img").src = 'image-asset/icon-maindish.png';
+        document.getElementById("dish-name").innerText = 'Instruction';
+        document.getElementById("dish-name").style.paddingTop = '1.2rem';
+        document.getElementById("dish-intro").innerText = 'Welcome to Vietnamese Cuisine Generator!';
+        document.getElementById("description").innerText = 'Enter your birthday above to discover which Vietnamese dish represents you! You can also click on buttons on the side to read about other dishes and corresponding characters.';
+    }, false);
+}
+
 const dishData = [
     {
         name: "Pho",

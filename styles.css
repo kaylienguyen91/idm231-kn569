@@ -36,7 +36,7 @@ html {
 
 /* header and #intro styles */
 
-#instruct-button {
+#help-button-img {
     width: 3rem;
     filter: invert(67%) sepia(38%) saturate(1904%) hue-rotate(354deg) brightness(94%) contrast(92%) drop-shadow(5px 5px 4px #E6D6BC);
     position: absolute;
@@ -125,6 +125,11 @@ h1 {
 
 #egg-coffee-img, #phin-coffee-img {
     width: 70%;
+}
+
+.special-img {
+    display: block;
+    margin: auto;
 }
 
 button {
