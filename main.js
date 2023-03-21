@@ -139,7 +139,7 @@ const dishData = [
     },
     {
         name: "Bun cha",
-        intro: "Rice vermicelli noodles grilled pork pieces/meatballs and a broth that is both a marinade for the meat and a dip",
+        intro: "Rice vermicelli noodles with grilled pork pieces/meatballs and a broth that is both a marinade for the meat and a dip",
         description: "You are quiet and a little shy when people first meet you. But once they get to know you, you become way more talkative and outgoing! You have a hidden charm that makes people want to stick around.",
         image: 'image-asset/bun-cha.png',
         sound: 'sounds/bun-cha.wav',
