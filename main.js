@@ -4,6 +4,10 @@ let dish = "";
 let month = "";
 let day = "";
 
+const dishImage = document.getElementById("dish-img");
+const dishName = document.getElementById("dish-name");
+const dishIntro = document.getElementById("dish-intro");
+const dishDescrip = document.getElementById("description");
 
 function enterBday(event) {
     event.preventDefault();
@@ -56,10 +60,10 @@ function showDishDetail(dish) {
         item => item.name === dish
     )[0]
     console.log(mainDish)
-    document.getElementById("dish-img").src = mainDish.image;
-    document.getElementById("dish-name").innerText = mainDish.name;
-    document.getElementById("dish-intro").innerText = mainDish.intro;
-    document.getElementById("description").innerText = mainDish.description;
+    dishImage.src = mainDish.image;
+    dishName.innerText = mainDish.name;
+    dishIntro.innerText = mainDish.intro;
+    dishDescrip.innerText = mainDish.description;
 
     playsound(mainDish.sound);
 }
