@@ -107,7 +107,7 @@ if (helpButton) {
         dishName.innerText = 'Instruction';
         dishName.style.paddingTop = '1.2rem';
         dishIntro.innerText = 'Welcome to Vietnamese Cuisine Generator!';
-        dishDescrip.innerText = 'Enter your birthday above to discover which Vietnamese dish represents you! You can also click on buttons on the side to read about other dishes and corresponding characters.';
+        dishDescrip.innerText = 'Enter your birthday above to discover which Vietnamese dish you are! You can also click on buttons on the side to read about other dishes and corresponding characters.';
     }, false);
 }
 
