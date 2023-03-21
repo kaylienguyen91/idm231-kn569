@@ -34,6 +34,13 @@ html {
     background-color: var(--beige);
 }
 
+#copyright {
+    color: grey;
+    font-family: var(--josefin-regular);
+    font-size: .75rem;
+    text-align: center;
+}
+
 /* header and #intro styles */
 
 #help-button-img {

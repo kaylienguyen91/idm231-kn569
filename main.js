@@ -13,7 +13,7 @@ function enterBday(event) {
     event.preventDefault();
     const bday = document.getElementById('bday-input');
 
-    if (bday.length <= 0) return;
+    if (bday.value.length <= 0) return;
     month = parseInt(Number(bday.value.substring(5, 7)));
     day = parseInt(Number(bday.value.substring(8, 10)));
     findBday(month, day)
