@@ -104,7 +104,6 @@ const helpButton = document.getElementById('help-button');
 if (helpButton) {
     helpButton.addEventListener('click', () => {
         dishImage.src = 'image-asset/icon-maindish.png';
-        dishImage.style.width = '200px';
         dishName.innerText = 'Instruction';
         dishName.style.paddingTop = '1.2rem';
         dishIntro.innerText = 'Welcome to Vietnamese Cuisine Generator!';
