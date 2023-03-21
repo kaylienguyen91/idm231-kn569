@@ -14,8 +14,8 @@ function enterBday(event) {
     const bday = document.getElementById('bday-input');
 
     if (bday.length <= 0) return;
-    month = parseInt(bday.value.substring(5, 7));
-    day = parseInt(bday.value.substring(8, 10));
+    month = parseInt(Number(bday.value.substring(5, 7)));
+    day = parseInt(Number(bday.value.substring(8, 10)));
     findBday(month, day)
 };
 
@@ -91,10 +91,10 @@ function showClickedDish(button) {
         item => item.id === food
     )[0]
     console.log(mainDish)
-    document.getElementById("dish-img").src = mainDish.image;
-    document.getElementById("dish-name").innerText = mainDish.name;
-    document.getElementById("dish-intro").innerText = mainDish.intro;
-    document.getElementById("description").innerText = mainDish.description;
+    dishImage.src = mainDish.image;
+    dishName.innerText = mainDish.name;
+    dishIntro.innerText = mainDish.intro;
+    dishDescrip.innerText = mainDish.description;
 
     playsound(mainDish.sound);
 }
@@ -103,12 +103,12 @@ const helpButton = document.getElementById('help-button');
 
 if (helpButton) {
     helpButton.addEventListener('click', () => {
-        document.getElementById("dish-img").src = 'image-asset/icon-maindish.png';
-        document.getElementById("dish-img").style.width = '200px';
-        document.getElementById("dish-name").innerText = 'Instruction';
-        document.getElementById("dish-name").style.paddingTop = '1.2rem';
-        document.getElementById("dish-intro").innerText = 'Welcome to Vietnamese Cuisine Generator!';
-        document.getElementById("description").innerText = 'Enter your birthday above to discover which Vietnamese dish represents you! You can also click on buttons on the side to read about other dishes and corresponding characters.';
+        dishImage.src = 'image-asset/icon-maindish.png';
+        dishImage.style.width = '200px';
+        dishName.innerText = 'Instruction';
+        dishName.style.paddingTop = '1.2rem';
+        dishIntro.innerText = 'Welcome to Vietnamese Cuisine Generator!';
+        dishDescrip.innerText = 'Enter your birthday above to discover which Vietnamese dish represents you! You can also click on buttons on the side to read about other dishes and corresponding characters.';
     }, false);
 }
 
