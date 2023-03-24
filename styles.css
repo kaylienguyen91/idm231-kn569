@@ -21,6 +21,7 @@
 :root {
     --beige: #FFF7EC;
     --yellow: #E69712;
+    --orange: #DF6135;
     --red: #AF411D;
     --light-red: #FFD4C6;
 
@@ -45,7 +46,12 @@ html {
 
 #help-button-img {
     width: 3rem;
+    transition: width .5s ease 0s;
     filter: invert(67%) sepia(38%) saturate(1904%) hue-rotate(354deg) brightness(94%) contrast(92%) drop-shadow(5px 5px 4px #E6D6BC);
+}
+
+#help-button-img:active {
+    width: 2.7rem;
 }
 
 h1 {
@@ -82,6 +88,11 @@ h1 {
     background-color: var(--yellow);
     color: white;
     border: 0;
+    transition: background-color .3s ease-out 0s;
+}
+
+#go-button:hover {
+    background-color: var(--orange);
 }
 
 #bday-input, #go-button {
@@ -121,14 +132,23 @@ h1 {
 .menu img {
     opacity: 0.5;
     width: 100%;
+    transition: opacity .3s ease-out 0s;
 }
 
 #che-img {
     width: 65%;
 }
 
+#che-img:active {
+    width: 55%;
+}
+
 #egg-coffee-img, #phin-coffee-img {
     width: 70%;
+}
+
+#egg-coffee-img:active, #phin-coffee-img:active {
+    width: 60%;
 }
 
 .special-img {
